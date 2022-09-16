@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+body{ 
+    background-color: rgb(116, 116, 53);
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/*deixa os elementos um do lado do outro, quebrar, centarlizar e dar espaço de 20px*/
+.pinturas {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/*definidas largura e altura*/
+/*relative => as informações serão basedas na pimtura*/
+.pinturas .pintura {
+    width: 335px;
+    height: 431px;
+    position: relative;
+}
+
+/*Caso algum dia venha uma imagem maior que 335px, a img continua com seu tamanho 100% ---- não é obrigatório, mas é sempre bom colocar pra não ocorrer problemas futuros*/
+.pinturas .pintura img {
+    width: 100%;
+}
+
+/*avsolute => cria um contesto só pra ela*/
+/*bottom e left => posicionar o texto dentro da pintura*/
+.informacao {
+    position: absolute;
+    color: #fff;
+    bottom: 25px;
+    left: 40px;
+}
+
+/*tamanho do título*/
+.pinturas .pintura .informacao .titulo {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.pinturas .pintura .informacao .subtitulo {
+    font-weight: 300;
+    font-size: 17px;
+}
